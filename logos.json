@@ -1,0 +1,485 @@
+{
+  "lastUpdated": "2026-05-19T12:03:08.434Z",
+  "logos": [
+    {
+      "name": "Airtable",
+      "file": "Airtable.svg"
+    },
+    {
+      "name": "Algolia",
+      "file": "Algolia.svg"
+    },
+    {
+      "name": "Anthropic",
+      "file": "Anthropic.svg"
+    },
+    {
+      "name": "Apify",
+      "file": "Apify.svg"
+    },
+    {
+      "name": "apollo.io",
+      "file": "apollo.io.svg"
+    },
+    {
+      "name": "AssemblyAI",
+      "file": "AssemblyAI.svg"
+    },
+    {
+      "name": "AWS",
+      "file": "AWS.svg"
+    },
+    {
+      "name": "Azure",
+      "file": "Azure.svg"
+    },
+    {
+      "name": "Bitly",
+      "file": "Bitly.svg"
+    },
+    {
+      "name": "bolt.new",
+      "file": "bolt.new.svg"
+    },
+    {
+      "name": "Brandfetch",
+      "file": "Brandfetch.svg"
+    },
+    {
+      "name": "Browser Use",
+      "file": "Browser Use.svg"
+    },
+    {
+      "name": "Browserless",
+      "file": "Browserless.svg"
+    },
+    {
+      "name": "BuildShip",
+      "file": "BuildShip.svg"
+    },
+    {
+      "name": "Cal",
+      "file": "Cal.svg"
+    },
+    {
+      "name": "Claude",
+      "file": "Claude.svg"
+    },
+    {
+      "name": "Cloudflare",
+      "file": "Cloudflare.svg"
+    },
+    {
+      "name": "Cohere",
+      "file": "Cohere.svg"
+    },
+    {
+      "name": "CometAPI",
+      "file": "CometAPI.svg"
+    },
+    {
+      "name": "Context7",
+      "file": "Context7.svg"
+    },
+    {
+      "name": "Cursor",
+      "file": "Cursor.svg"
+    },
+    {
+      "name": "Deepseek",
+      "file": "Deepseek.svg"
+    },
+    {
+      "name": "dev.to",
+      "file": "dev.to.svg"
+    },
+    {
+      "name": "Diffbot",
+      "file": "Diffbot.svg"
+    },
+    {
+      "name": "Discord",
+      "file": "Discord.svg"
+    },
+    {
+      "name": "Dropbox",
+      "file": "Dropbox.svg"
+    },
+    {
+      "name": "fal.ai",
+      "file": "fal.ai.svg"
+    },
+    {
+      "name": "FFmpeg",
+      "file": "FFmpeg.svg"
+    },
+    {
+      "name": "Figma",
+      "file": "Figma.svg"
+    },
+    {
+      "name": "Firebase",
+      "file": "Firebase.svg"
+    },
+    {
+      "name": "Firestore",
+      "file": "Firestore.svg"
+    },
+    {
+      "name": "Flutterflow",
+      "file": "Flutterflow.svg"
+    },
+    {
+      "name": "Framer",
+      "file": "Framer.svg"
+    },
+    {
+      "name": "Gatsby",
+      "file": "Gatsby.svg"
+    },
+    {
+      "name": "git",
+      "file": "git.svg"
+    },
+    {
+      "name": "Github",
+      "file": "Github.svg"
+    },
+    {
+      "name": "Gmail",
+      "file": "Gmail.svg"
+    },
+    {
+      "name": "Google AI Studio",
+      "file": "Google AI Studio.svg"
+    },
+    {
+      "name": "Google Antigravity",
+      "file": "Google Antigravity.svg"
+    },
+    {
+      "name": "Google Calendar",
+      "file": "Google Calendar.svg"
+    },
+    {
+      "name": "Google Cloud Vision",
+      "file": "Google Cloud Vision.svg"
+    },
+    {
+      "name": "Google Cloud",
+      "file": "Google Cloud.svg"
+    },
+    {
+      "name": "Google Drive",
+      "file": "Google Drive.svg"
+    },
+    {
+      "name": "Google Gemini",
+      "file": "Google Gemini.svg"
+    },
+    {
+      "name": "Google Maps",
+      "file": "Google Maps.svg"
+    },
+    {
+      "name": "Google Search Console",
+      "file": "Google Search Console.svg"
+    },
+    {
+      "name": "Google Translate",
+      "file": "Google Translate.svg"
+    },
+    {
+      "name": "Google Vertex AI",
+      "file": "Google Vertex AI.svg"
+    },
+    {
+      "name": "Google",
+      "file": "Google.svg"
+    },
+    {
+      "name": "Grok",
+      "file": "Grok.svg"
+    },
+    {
+      "name": "Groq",
+      "file": "Groq.svg"
+    },
+    {
+      "name": "HashiCorp",
+      "file": "HashiCorp.svg"
+    },
+    {
+      "name": "Hubspot",
+      "file": "Hubspot.svg"
+    },
+    {
+      "name": "Hugging Face",
+      "file": "Hugging Face.svg"
+    },
+    {
+      "name": "IMDb",
+      "file": "IMDb.svg"
+    },
+    {
+      "name": "Inception Labs",
+      "file": "Inception Labs.svg"
+    },
+    {
+      "name": "Leap AI",
+      "file": "Leap AI.svg"
+    },
+    {
+      "name": "Lemon Squeezy",
+      "file": "Lemon Squeezy.svg"
+    },
+    {
+      "name": "Leonardo.Ai",
+      "file": "Leonardo.Ai.svg"
+    },
+    {
+      "name": "Linear",
+      "file": "Linear.svg"
+    },
+    {
+      "name": "LlevenLabs",
+      "file": "LlevenLabs.svg"
+    },
+    {
+      "name": "Loops",
+      "file": "Loops.svg"
+    },
+    {
+      "name": "Lovable",
+      "file": "Lovable.svg"
+    },
+    {
+      "name": "Medium",
+      "file": "Medium.svg"
+    },
+    {
+      "name": "Meilisearch",
+      "file": "Meilisearch.svg"
+    },
+    {
+      "name": "Meta",
+      "file": "Meta.svg"
+    },
+    {
+      "name": "Microsoft",
+      "file": "Microsoft.svg"
+    },
+    {
+      "name": "Midjourney",
+      "file": "Midjourney.svg"
+    },
+    {
+      "name": "Mistral",
+      "file": "Mistral.svg"
+    },
+    {
+      "name": "Model Context Protocol",
+      "file": "Model Context Protocol.svg"
+    },
+    {
+      "name": "monday.com",
+      "file": "monday.com.svg"
+    },
+    {
+      "name": "MongoDB",
+      "file": "MongoDB.svg"
+    },
+    {
+      "name": "MySQL",
+      "file": "MySQL.svg"
+    },
+    {
+      "name": "Neon",
+      "file": "Neon.svg"
+    },
+    {
+      "name": "Nevermined",
+      "file": "Nevermined.svg"
+    },
+    {
+      "name": "Notion",
+      "file": "Notion.svg"
+    },
+    {
+      "name": "npm",
+      "file": "npm.svg"
+    },
+    {
+      "name": "OneSignal",
+      "file": "OneSignal.svg"
+    },
+    {
+      "name": "OpenAI",
+      "file": "OpenAI.svg"
+    },
+    {
+      "name": "OpenClaw",
+      "file": "OpenClaw.svg"
+    },
+    {
+      "name": "PaLM",
+      "file": "PaLM.svg"
+    },
+    {
+      "name": "Penpot",
+      "file": "Penpot.svg"
+    },
+    {
+      "name": "Perplexity",
+      "file": "Perplexity.svg"
+    },
+    {
+      "name": "Pinecone",
+      "file": "Pinecone.svg"
+    },
+    {
+      "name": "Pipedream",
+      "file": "Pipedream.svg"
+    },
+    {
+      "name": "PlayHT",
+      "file": "PlayHT.svg"
+    },
+    {
+      "name": "Postgresql",
+      "file": "Postgresql.svg"
+    },
+    {
+      "name": "Posthog",
+      "file": "Posthog.svg"
+    },
+    {
+      "name": "Qdrant",
+      "file": "Qdrant.svg"
+    },
+    {
+      "name": "QuickBooks",
+      "file": "QuickBooks.svg"
+    },
+    {
+      "name": "RapidAPI",
+      "file": "RapidAPI.svg"
+    },
+    {
+      "name": "Reddit",
+      "file": "Reddit.svg"
+    },
+    {
+      "name": "Replicate",
+      "file": "Replicate.svg"
+    },
+    {
+      "name": "Resend",
+      "file": "Resend.svg"
+    },
+    {
+      "name": "RevenueCat",
+      "file": "RevenueCat.svg"
+    },
+    {
+      "name": "Salesforce",
+      "file": "Salesforce.svg"
+    },
+    {
+      "name": "Sendgrid",
+      "file": "Sendgrid.svg"
+    },
+    {
+      "name": "shadcn",
+      "file": "shadcn.svg"
+    },
+    {
+      "name": "Skyfire",
+      "file": "Skyfire.svg"
+    },
+    {
+      "name": "Slack",
+      "file": "Slack.svg"
+    },
+    {
+      "name": "Spotify",
+      "file": "Spotify.svg"
+    },
+    {
+      "name": "stability.ai",
+      "file": "stability.ai.svg"
+    },
+    {
+      "name": "Storybook",
+      "file": "Storybook.svg"
+    },
+    {
+      "name": "Stripe",
+      "file": "Stripe.svg"
+    },
+    {
+      "name": "Supabase",
+      "file": "Supabase.svg"
+    },
+    {
+      "name": "Tavily",
+      "file": "Tavily.svg"
+    },
+    {
+      "name": "Telegram",
+      "file": "Telegram.svg"
+    },
+    {
+      "name": "together.ai",
+      "file": "together.ai.svg"
+    },
+    {
+      "name": "Trello",
+      "file": "Trello.svg"
+    },
+    {
+      "name": "Twilio",
+      "file": "Twilio.svg"
+    },
+    {
+      "name": "Typeform",
+      "file": "Typeform.svg"
+    },
+    {
+      "name": "Typesense",
+      "file": "Typesense.svg"
+    },
+    {
+      "name": "Unsplash",
+      "file": "Unsplash.svg"
+    },
+    {
+      "name": "Upstash",
+      "file": "Upstash.svg"
+    },
+    {
+      "name": "v0",
+      "file": "v0.svg"
+    },
+    {
+      "name": "Vercel",
+      "file": "Vercel.svg"
+    },
+    {
+      "name": "Visual Studio",
+      "file": "Visual Studio.svg"
+    },
+    {
+      "name": "Webflow",
+      "file": "Webflow.svg"
+    },
+    {
+      "name": "Whatsapp",
+      "file": "Whatsapp.svg"
+    },
+    {
+      "name": "X",
+      "file": "X.svg"
+    }
+  ]
+}

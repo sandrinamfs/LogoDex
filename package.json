@@ -1,0 +1,11 @@
+{
+  "name": "logolo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node dev.js",
+    "scan": "node scan.js",
+    "start": "python3 -m http.server 8080",
+    "setup": "git config core.hooksPath .githooks && echo 'Git hooks configured'"
+  }
+}

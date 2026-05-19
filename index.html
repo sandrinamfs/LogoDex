@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logolo — All the logos, none of the hunt.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <span class="logo">Logolo</span>
+      <span class="tagline">All the logos, none of the hunt.</span>
+    </div>
+    <div class="search-box">
+      <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text" id="searchInput" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="header-right">
+      <button class="header-btn" id="downloadAllBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        <span>Download all</span>
+      </button>
+      <button class="header-btn" id="openFigmaBtn">
+        <svg width="10" height="15" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+          <path d="M19 28.5C19 25.98 20.001 23.564 21.7825 21.7825C23.564 20.001 25.98 19 28.5 19C31.02 19 33.436 20.001 35.2175 21.7825C36.999 23.564 38 25.98 38 28.5C38 31.02 36.999 33.436 35.2175 35.2175C33.436 36.999 31.02 38 28.5 38C25.98 38 23.564 36.999 21.7825 35.2175C20.001 33.436 19 31.02 19 28.5Z" fill="#1ABCFE"/>
+          <path d="M0 47.5C0 44.98 1.001 42.564 2.7825 40.7825C4.564 39.001 6.98 38 9.5 38H19V47.5C19 50.02 17.999 52.436 16.2175 54.2175C14.436 55.999 12.02 57 9.5 57C6.98 57 4.564 55.999 2.7825 54.2175C1.001 52.436 0 50.02 0 47.5Z" fill="#0ACF83"/>
+          <path d="M19 0V19H28.5C31.02 19 33.436 17.999 35.2175 16.2175C36.999 14.436 38 12.02 38 9.5C38 6.98 36.999 4.564 35.2175 2.7825C33.436 1.001 31.02 0 28.5 0H19Z" fill="#FF7262"/>
+          <path d="M0 9.5C0 12.02 1.001 14.436 2.7825 16.2175C4.564 17.999 6.98 19 9.5 19H19V0H9.5C6.98 0 4.564 1.001 2.7825 2.7825C1.001 4.564 0 6.98 0 9.5Z" fill="#F24E1E"/>
+          <path d="M0 28.5C0 31.02 1.001 33.436 2.7825 35.2175C4.564 36.999 6.98 38 9.5 38H19V19H9.5C6.98 19 4.564 20.001 2.7825 21.7825C1.001 23.564 0 25.98 0 28.5Z" fill="#A259FF"/>
+        </svg>
+        <span>Open in Figma</span>
+      </button>
+      <div class="theme-toggle">
+        <button class="toggle-btn" id="lightBtn" aria-label="Light mode">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <button class="toggle-btn" id="darkBtn" aria-label="Dark mode">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="logo-grid" id="logoGrid"></div>
+    <div class="empty-state hidden" id="emptyState">
+      No logos found for "<span id="searchQuery"></span>"
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>Clean SVGs for AI stack. Free forever. Vibecoded with love by <a href="https://x.com/_afeeee" target="_blank" rel="noopener">@_afeeee</a></span>
+    <span id="footerUpdated">Last Updated: —</span>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
