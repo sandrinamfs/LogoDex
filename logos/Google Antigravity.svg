@@ -66,7 +66,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="4.24456" result="effect1_foregroundBlur_37_1041"/>
 </filter>
-<filter id="filter5_f_37_1041" x="12.7815" y="23.0548" width="35.7669" height="36.4431" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter5_f_37_1041" x="12.7815" y="23.0548" width="35.7669" height="36.4429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="4.03359" result="effect1_foregroundBlur_37_1041"/>
@@ -86,7 +86,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="2.92121" result="effect1_foregroundBlur_37_1041"/>
 </filter>
-<filter id="filter9_f_37_1041" x="17.7014" y="-3.85906" width="37.744" height="33.4695" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter9_f_37_1041" x="17.7014" y="-3.85906" width="37.744" height="33.4696" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="2.46731" result="effect1_foregroundBlur_37_1041"/>

@@ -9,6 +9,7 @@ const CHECK_ICON = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" 
 const grid = document.getElementById("logoGrid");
 const searchInput = document.getElementById("searchInput");
 const emptyState = document.getElementById("emptyState");
+const asciiAnim = document.getElementById("asciiAnim");
 const searchQueryEl = document.getElementById("searchQuery");
 const lightBtn = document.getElementById("lightBtn");
 const darkBtn = document.getElementById("darkBtn");
@@ -58,6 +59,66 @@ function applyTheme(theme) {
 lightBtn.addEventListener("click", () => applyTheme("light"));
 darkBtn.addEventListener("click", () => applyTheme("dark"));
 
+// ── ASCII animation ───────────────────────────────────────────────────────────
+
+// ── Rain animation ────────────────────────────────────────────────────────────
+
+const RAIN_ROWS = 8;
+const RAIN_COLS = 13;
+const RAIN_GAP  = 2;
+const RAIN_TRAIL = ['│', '╎', '·'];
+
+const drops = Array.from({ length: RAIN_COLS }, () => ({
+  y:       -Math.floor(Math.random() * (RAIN_ROWS + RAIN_TRAIL.length)),
+  speed:   Math.random() < 0.35 ? 2 : 1,
+  counter: 0,
+}));
+
+function renderRain() {
+  const width = RAIN_COLS * RAIN_GAP;
+  const grid  = Array.from({ length: RAIN_ROWS }, () => Array(width).fill(' '));
+
+  drops.forEach((drop, d) => {
+    const x = d * RAIN_GAP;
+    RAIN_TRAIL.forEach((char, t) => {
+      const row = drop.y - t;
+      if (row >= 0 && row < RAIN_ROWS) grid[row][x] = char;
+    });
+  });
+
+  return grid.map(row => row.join('')).join('\n');
+}
+
+function tickRain() {
+  drops.forEach(drop => {
+    drop.counter++;
+    if (drop.counter >= drop.speed) {
+      drop.counter = 0;
+      drop.y++;
+      if (drop.y - RAIN_TRAIL.length >= RAIN_ROWS) {
+        drop.y     = -RAIN_TRAIL.length - Math.floor(Math.random() * 4);
+        drop.speed = Math.random() < 0.35 ? 2 : 1;
+      }
+    }
+  });
+  asciiAnim.textContent = renderRain();
+}
+
+let animInterval = null;
+
+function startAnim() {
+  asciiAnim.style.opacity = "1";
+  asciiAnim.textContent = renderRain();
+  animInterval = setInterval(tickRain, 130);
+}
+
+function stopAnim() {
+  clearInterval(animInterval);
+  animInterval = null;
+}
+
+window.addEventListener("beforeunload", stopAnim);
+
 // ── Search ────────────────────────────────────────────────────────────────────
 
 searchInput.addEventListener("input", () => {
@@ -65,10 +126,12 @@ searchInput.addEventListener("input", () => {
   const filtered = q ? logos.filter(l => l.name.toLowerCase().includes(q)) : logos;
   renderGrid(filtered);
   if (filtered.length === 0) {
-    emptyState.classList.remove("hidden");
     searchQueryEl.textContent = searchInput.value.trim();
+    emptyState.classList.remove("hidden");
+    startAnim();
   } else {
     emptyState.classList.add("hidden");
+    stopAnim();
   }
 });
 
