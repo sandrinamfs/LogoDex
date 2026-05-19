@@ -42,10 +42,6 @@
       "file": "bolt.new.svg"
     },
     {
-      "name": "Bolt",
-      "file": "Bolt.svg"
-    },
-    {
       "name": "Brandfetch",
       "file": "Brandfetch.svg"
     },
@@ -112,10 +108,6 @@
     {
       "name": "fal.ai",
       "file": "fal.ai.svg"
-    },
-    {
-      "name": "Fal",
-      "file": "Fal.svg"
     },
     {
       "name": "FFmpeg",
@@ -470,10 +462,6 @@
       "file": "Spotify.svg"
     },
     {
-      "name": "Stability AI",
-      "file": "Stability AI.svg"
-    },
-    {
       "name": "stability.ai",
       "file": "stability.ai.svg"
     },
@@ -558,8 +546,8 @@
       "file": "Youtube.svg"
     },
     {
-      "name": "Z",
-      "file": "Z.svg"
+      "name": "Z.ai",
+      "file": "Z.ai.svg"
     }
   ]
 }
