@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-19T18:27:48.083Z",
+  "lastUpdated": "2026-05-19T18:32:53.952Z",
   "logos": [
     {
       "name": "Airtable",
@@ -218,12 +218,28 @@
       "file": "Hugging Face.svg"
     },
     {
+      "name": "Ideogram",
+      "file": "Ideogram.svg"
+    },
+    {
       "name": "IMDb",
       "file": "IMDb.svg"
     },
     {
       "name": "Inception Labs",
       "file": "Inception Labs.svg"
+    },
+    {
+      "name": "Kimi AI",
+      "file": "Kimi AI.svg"
+    },
+    {
+      "name": "KlingAI",
+      "file": "KlingAI.svg"
+    },
+    {
+      "name": "LangChain",
+      "file": "LangChain.svg"
     },
     {
       "name": "Leap AI",
@@ -242,8 +258,16 @@
       "file": "Linear.svg"
     },
     {
+      "name": "LlamaIndex",
+      "file": "LlamaIndex.svg"
+    },
+    {
       "name": "LlevenLabs",
       "file": "LlevenLabs.svg"
+    },
+    {
+      "name": "LM Studio",
+      "file": "LM Studio.svg"
     },
     {
       "name": "Loops",
@@ -252,6 +276,10 @@
     {
       "name": "Lovable",
       "file": "Lovable.svg"
+    },
+    {
+      "name": "Manus",
+      "file": "Manus.svg"
     },
     {
       "name": "Medium",
@@ -264,6 +292,10 @@
     {
       "name": "Meta",
       "file": "Meta.svg"
+    },
+    {
+      "name": "Microsoft Copilot",
+      "file": "Microsoft Copilot.svg"
     },
     {
       "name": "Microsoft",
@@ -310,6 +342,10 @@
       "file": "npm.svg"
     },
     {
+      "name": "Ollama",
+      "file": "Ollama.svg"
+    },
+    {
       "name": "OneSignal",
       "file": "OneSignal.svg"
     },
@@ -346,6 +382,10 @@
       "file": "PlayHT.svg"
     },
     {
+      "name": "Poe",
+      "file": "Poe.svg"
+    },
+    {
       "name": "Postgresql",
       "file": "Postgresql.svg"
     },
@@ -374,12 +414,20 @@
       "file": "Replicate.svg"
     },
     {
+      "name": "Replit",
+      "file": "Replit.svg"
+    },
+    {
       "name": "Resend",
       "file": "Resend.svg"
     },
     {
       "name": "RevenueCat",
       "file": "RevenueCat.svg"
+    },
+    {
+      "name": "Runway",
+      "file": "Runway.svg"
     },
     {
       "name": "Salesforce",
@@ -400,6 +448,10 @@
     {
       "name": "Slack",
       "file": "Slack.svg"
+    },
+    {
+      "name": "Spline",
+      "file": "Spline.svg"
     },
     {
       "name": "Spotify",
