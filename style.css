@@ -37,6 +37,7 @@ body {
   color: #8E8E93;
   background: var(--bg);
   min-height: 100dvh;
+  overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: none;
   -webkit-font-smoothing: antialiased;
@@ -467,6 +468,8 @@ body::-webkit-scrollbar {
   /* Main: extra top padding for 2-row header */
   .main {
     padding-top: 120px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   /* Grid: 3 columns, condensed */
@@ -490,7 +493,8 @@ body::-webkit-scrollbar {
     height: auto;
     padding: 14px 16px;
     gap: 4px;
-    text-align: center;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .toast {
