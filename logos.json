@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-19T19:55:23.603Z",
+  "lastUpdated": "2026-05-20T14:41:16.788Z",
   "logos": [
     {
       "name": "Airtable",
@@ -118,12 +118,16 @@
       "file": "Figma.svg"
     },
     {
-      "name": "Firebase",
-      "file": "Firebase.svg"
+      "name": "Firebase Cloud Firestore",
+      "file": "Firebase Cloud Firestore.svg"
     },
     {
-      "name": "Firestore",
-      "file": "Firestore.svg"
+      "name": "Firebase Studio",
+      "file": "Firebase Studio.svg"
+    },
+    {
+      "name": "Firebase",
+      "file": "Firebase.svg"
     },
     {
       "name": "Flutterflow",

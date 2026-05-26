@@ -16,6 +16,10 @@ const darkBtn = document.getElementById("darkBtn");
 const downloadAllBtn = document.getElementById("downloadAllBtn");
 const openFigmaBtn = document.getElementById("openFigmaBtn");
 const toast = document.getElementById("toast");
+const multiselectBar = document.getElementById("multiselectBar");
+const multiselectLabel = document.getElementById("multiselectLabel");
+const multiselectDownload = document.getElementById("multiselectDownload");
+const multiselectClear = document.getElementById("multiselectClear");
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 
@@ -119,6 +123,69 @@ function stopAnim() {
 
 window.addEventListener("beforeunload", stopAnim);
 
+// ── Multiselect ───────────────────────────────────────────────────────────────
+
+const selectedFiles = new Set();
+let lastClickIndex = -1;
+
+function handleCardClick(e, card, index) {
+  if (e.target.closest(".card-actions")) return;
+  const file = card.dataset.file;
+
+  if (e.shiftKey && lastClickIndex !== -1) {
+    const cards = [...grid.querySelectorAll(".card")];
+    const start = Math.min(lastClickIndex, index);
+    const end   = Math.max(lastClickIndex, index);
+    for (let i = start; i <= end; i++) selectedFiles.add(cards[i].dataset.file);
+  } else {
+    selectedFiles.has(file) ? selectedFiles.delete(file) : selectedFiles.add(file);
+    lastClickIndex = index;
+  }
+
+  updateSelectionUI();
+}
+
+function updateSelectionUI() {
+  grid.querySelectorAll(".card").forEach(card => {
+    card.classList.toggle("selected", selectedFiles.has(card.dataset.file));
+  });
+  const count = selectedFiles.size;
+  multiselectBar.classList.toggle("visible", count > 0);
+  multiselectLabel.textContent = `Download ${count} logo${count !== 1 ? "s" : ""}`;
+}
+
+function clearSelection() {
+  selectedFiles.clear();
+  lastClickIndex = -1;
+  updateSelectionUI();
+}
+
+multiselectClear.addEventListener("click", clearSelection);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") clearSelection();
+});
+
+multiselectDownload.addEventListener("click", async () => {
+  if (typeof JSZip === "undefined") { showToast("JSZip failed to load"); return; }
+  const files = [...selectedFiles];
+  const zip = new JSZip();
+  const folder = zip.folder("logolo-logos");
+  let count = 0;
+  await Promise.allSettled(files.map(async file => {
+    try {
+      const res = await fetch(`logos/${encodeURIComponent(file)}`);
+      if (res.ok) { folder.file(file, await res.blob()); count++; }
+    } catch { /* skip */ }
+  }));
+  if (count > 0) {
+    const blob = await zip.generateAsync({ type: "blob" });
+    triggerDownload(URL.createObjectURL(blob), "logolo-logos.zip", true);
+    showToast(`Downloaded ${count} logo${count !== 1 ? "s" : ""}`);
+    clearSelection();
+  }
+});
+
 // ── Search ────────────────────────────────────────────────────────────────────
 
 searchInput.addEventListener("input", () => {
@@ -138,6 +205,7 @@ searchInput.addEventListener("input", () => {
 // ── Render ────────────────────────────────────────────────────────────────────
 
 function renderGrid(items) {
+  lastClickIndex = -1;
   grid.innerHTML = items.map(logo => `
     <div class="card" data-file="${logo.file}" data-name="${escHtml(logo.name)}">
       <div class="card-body">
@@ -153,12 +221,17 @@ function renderGrid(items) {
     </div>
   `).join("");
 
+  grid.querySelectorAll(".card").forEach((card, i) => {
+    card.addEventListener("click", (e) => handleCardClick(e, card, i));
+  });
   grid.querySelectorAll(".copy-btn").forEach(btn =>
-    btn.addEventListener("click", () => copySvg(btn.closest(".card")))
+    btn.addEventListener("click", (e) => { e.stopPropagation(); copySvg(btn.closest(".card")); })
   );
   grid.querySelectorAll(".dl-btn").forEach(btn =>
-    btn.addEventListener("click", () => downloadSvg(btn.closest(".card")))
+    btn.addEventListener("click", (e) => { e.stopPropagation(); downloadSvg(btn.closest(".card")); })
   );
+
+  updateSelectionUI();
 }
 
 function escHtml(str) {

@@ -218,10 +218,44 @@ body::-webkit-scrollbar {
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  cursor: default;
+  cursor: pointer;
   position: relative;
   height: 180px;
   z-index: 1;
+  transition: border-color 0.15s;
+}
+
+.card.selected {
+  border-color: #8E8E93;
+  background: rgba(142, 142, 147, 0.08);
+}
+
+/* ── Card check badge ── */
+
+.card-check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #8E8E93;
+  color: var(--bg);
+  font-size: 10px;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.card.selected .card-check {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .card:hover,
@@ -439,6 +473,74 @@ body::-webkit-scrollbar {
 .toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+/* ── Multiselect bar ── */
+
+.multiselect-bar {
+  position: fixed;
+  bottom: 68px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 200;
+  transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.multiselect-bar.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: all;
+}
+
+.multiselect-clear {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: #8E8E93;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s;
+  font-family: inherit;
+}
+
+.multiselect-clear:hover {
+  background: var(--action-hover-bg);
+}
+
+.multiselect-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1D1D1D;
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.multiselect-download:hover {
+  opacity: 0.85;
 }
 
 /* ── Responsive ── */

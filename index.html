@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LogoDex — All the logos, none of the hunt.</title>
+  <title>LogoDex — Clean SVGs for the AI stack.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -70,9 +70,17 @@
   </main>
 
   <footer class="footer">
-    <span>Clean SVGs for the AI stack. Vibecoded by <a href="https://x.com/_afeeee" target="_blank" rel="noopener">@_afeeee</a></span>
+    <span>Vibecoded by <a href="https://x.com/_afeeee" target="_blank" rel="noopener">@_afeeee</a></span>
     <span id="footerUpdated">Last Updated: —</span>
   </footer>
+
+  <div class="multiselect-bar" id="multiselectBar">
+    <button class="multiselect-clear" id="multiselectClear" aria-label="Clear selection">✕</button>
+    <button class="multiselect-download" id="multiselectDownload">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span id="multiselectLabel">Download 0</span>
+    </button>
+  </div>
 
   <div class="toast" id="toast"></div>
 
