@@ -16,4 +16,5 @@ Logos belong to their respective brands and may be copyrighted or trademarked.
 
 These logos are provided for design and development purposes. For production use, please check the brand’s official guidelines and assets.
 
-If you own a brand and want an icon removed or updated, email sandrina.mfs@gmail.com.
+If you own a brand and want an icon removed or updated, please open an issue on GitHub.
+
